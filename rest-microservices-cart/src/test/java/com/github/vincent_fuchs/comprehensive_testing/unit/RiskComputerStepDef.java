@@ -1,13 +1,13 @@
 package com.github.vincent_fuchs.comprehensive_testing.unit;
 
-import com.github.vincent_fuchs.comprehensive_testing.model.Product;
-import com.github.vincent_fuchs.comprehensive_testing.service.CartService;
 import com.github.vincent_fuchs.comprehensive_testing.model.ComputedRisk;
 import com.github.vincent_fuchs.comprehensive_testing.model.CountryRating;
+import com.github.vincent_fuchs.comprehensive_testing.model.Product;
+import com.github.vincent_fuchs.comprehensive_testing.model.ProductWithVolatilityIndex;
+import com.github.vincent_fuchs.comprehensive_testing.service.CartService;
 import com.github.vincent_fuchs.comprehensive_testing.service.CountryService;
 import com.github.vincent_fuchs.comprehensive_testing.service.ProductService;
 import com.github.vincent_fuchs.comprehensive_testing.service.VolatilityIndexService;
-import com.github.vincent_fuchs.comprehensive_testing.model.ProductWithVolatilityIndex;
 import com.google.common.collect.ImmutableMap;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -50,7 +50,7 @@ public class RiskComputerStepDef {
     public void the_rating_associated_to_the_countries_are_as_follows(List<CountryRating> countryRatings) throws Throwable {
         final Map<String, CountryRating> countryMapping = new HashMap<>();
         for (CountryRating countryCodeRating : countryRatings) {
-            countryMapping.put(countryCodeRating.getCountryCode(),countryCodeRating);
+            countryMapping.put(countryCodeRating.getCountryCode(), countryCodeRating);
         }
         Mockito.when(countryService.getRating(Matchers.anyString())).thenAnswer((Answer<CountryRating>) invocation -> {
             Object[] args = invocation.getArguments();

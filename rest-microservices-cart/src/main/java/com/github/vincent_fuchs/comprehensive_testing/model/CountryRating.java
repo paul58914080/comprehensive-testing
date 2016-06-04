@@ -15,10 +15,10 @@ public class CountryRating {
         super();
     }
 
-    public CountryRating(String countryCode,int rating, boolean shouldOverride) {
-        this.countryCode=countryCode;
-        this.rating=rating;
-        this.shouldOverride=shouldOverride;
+    public CountryRating(String countryCode, int rating, boolean shouldOverride) {
+        this.countryCode = countryCode;
+        this.rating = rating;
+        this.shouldOverride = shouldOverride;
     }
 }
 

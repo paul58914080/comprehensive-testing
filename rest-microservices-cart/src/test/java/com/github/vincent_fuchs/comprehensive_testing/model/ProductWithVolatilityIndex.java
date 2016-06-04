@@ -11,9 +11,9 @@ public class ProductWithVolatilityIndex {
 
     private String issuingCountry;
 
-    public ProductWithVolatilityIndex(String name,String issuingCountry, String volatilityIndex){
-        this.name=name;
-        this.issuingCountry=issuingCountry;
-        this.volatilityIndex=volatilityIndex;
+    public ProductWithVolatilityIndex(String name, String issuingCountry, String volatilityIndex) {
+        this.name = name;
+        this.issuingCountry = issuingCountry;
+        this.volatilityIndex = volatilityIndex;
     }
 }
